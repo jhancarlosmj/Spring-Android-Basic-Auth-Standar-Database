@@ -23,12 +23,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `alumnos`
+-- Estructura de tabla para la tabla `users`
 --
 
-CREATE TABLE IF NOT EXISTS `alumnos` (
-  `usuario` varchar(50) NOT NULL,
-  `contrasenya` varchar(50) NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
   `enabled` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `alumnos` (
 -- Volcado de datos para la tabla `alumnos`
 --
 
-INSERT INTO `alumnos` (`usuario`, `contrasenya`, `enabled`) VALUES
+INSERT INTO `users` (`username`, `password`, `enabled`) VALUES
 ('karim', 'karim', 1);
 
 -- --------------------------------------------------------
@@ -62,10 +62,10 @@ INSERT INTO `authorities` (`username`, `authority`) VALUES
 --
 
 --
--- Indices de la tabla `alumnos`
+-- Indices de la tabla `users`
 --
-ALTER TABLE `alumnos`
- ADD PRIMARY KEY (`usuario`);
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`username`);
 
 --
 -- Indices de la tabla `authorities`
